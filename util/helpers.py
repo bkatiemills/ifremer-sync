@@ -84,6 +84,7 @@ def argo_keymapping(nckey):
         "BISULFIDE_QC": "bisulfide_argoqc",
         "CDOM_QC": "cdom_argoqc",
         "CHLA_QC": "chla_argoqc",
+        "CHLA_FLUORESCENCE_QC": "chla_fluorescence_qc",
         "CNDC_QC": "cndc_argoqc",
         "CNDX_QC": "cndx_argoqc",
         "CP660_QC": "cp660_argoqc",
