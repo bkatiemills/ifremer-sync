@@ -51,7 +51,7 @@ def argo_keymapping(nckey):
         "BISULFIDE": "bisulfide",
         "CDOM": "cdom",
         "CHLA": "chla",
-        "CHLA_FLUORESCENCE" = "chla_fluorescence",
+        "CHLA_FLUORESCENCE": "chla_fluorescence",
         "CNDC": "cndc",
         "CNDX": "cndx",
         "CP660": "cp660",
