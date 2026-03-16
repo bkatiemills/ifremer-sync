@@ -150,6 +150,9 @@ def stringcycle(cyclenumber):
     # given a numerical cyclenumber,
     # return a string left padded with 0s appropriate for use in a profile ID
 
+    if cyclenumber == -1:
+        return 'NAN'
+
     c = int(cyclenumber)
     if c < 10:
         return '00'+str(c)
@@ -179,7 +182,10 @@ def extract_metadata(ncfile, pidx=0):
     metadata['platform'] = xar['PLATFORM_NUMBER'].to_dict()['data'][pidx].decode('UTF-8').strip()
 
     ## cycle_number
-    metadata['cycle_number'] = int(xar['CYCLE_NUMBER'].to_dict()['data'][pidx])
+    try:
+        metadata['cycle_number'] = int(xar['CYCLE_NUMBER'].to_dict()['data'][pidx])
+    except:
+        metadata['cycle_number'] = -1
 
     ## profile_direction
     if('DIRECTION') in variables:
