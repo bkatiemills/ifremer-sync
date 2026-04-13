@@ -15,7 +15,7 @@ spec:
   containers:
   - name: sync
     imagePullPolicy: Always
-    image: argovis/ifremer-sync:dev
+    image: argovis/ifremer-sync:nightly
     command: ['bash', 'ifremer-sync-redo.sh', '/logs/ifremer/20260407-repair-bgc']
     volumeMounts:
       - mountPath: "/bulk"
