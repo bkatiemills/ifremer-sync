@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: argovis/localgp_input:dev
+    container: argovis/ifremer-sync:dev
 
     steps:
       - name: checkout

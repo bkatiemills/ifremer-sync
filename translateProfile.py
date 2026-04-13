@@ -78,7 +78,6 @@ except BaseException as err:
 argo['metadata'] = [argoMeta['_id']]
 # write data record to mongo
 try:
-	#print(argo)
     db.argo.replace_one({'_id': argo['_id']}, argo, True)
 except BaseException as err:
     print('error: data upsert failure on', argo)

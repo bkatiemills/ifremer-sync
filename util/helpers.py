@@ -515,6 +515,7 @@ def merge_metadata(md):
             metadata['data_warning'] = []
         metadata['data_warning'].extend(list(data_warnings))
     if bgc_mismatches:
+        print('warning: BGC mismatches logged', bgc_mismatches)
         metadata['bgc_mismatches'] = bgc_mismatches
 
     return metadata
