@@ -482,7 +482,7 @@ def merge_metadata(md):
     for key in ['profile_direction', 'platform', 'doi', 'data_center', 'pi_name', 'country', 'geolocation_argoqc', 'timestamp_argoqc', 'platform_type', 'positioning_system', 'vertical_sampling_scheme', 'wmo_inst_type']:
         if key in md[0]:
             metadata[key] = md[0][key]
-            if key in md[1] and md[0][key] != md[1][key]:
+            if len(md) == 2 and key in md[1] and md[0][key] != md[1][key]:
                 bgc_mismatches[key] = md[1][key]
                 data_warnings.add('bgc_mismatch')
         elif len(md) == 2 and key in md[1]:
